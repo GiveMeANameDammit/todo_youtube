@@ -23,22 +23,22 @@
 
     <script>
 
-        function addToDo(){
-            todolist.innerHTML += `
-            <li class="mdl-list__item">
-                <span class="mdl-list__item-primary-content">
-                <i class="material-icons  mdl-list__item-avatar">navigate_next</i>
-                ${todofield.value}
-                </span>
-                <span class="mdl-list__item-secondary-action">
-                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
-                    <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" unchecked />
-                </label>
-                </span>
-            </li>
-            `;
-            todofield.value='';
-        }
+        function addtodo() {
+            todolist.innerHTML+=`
+                <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons  mdl-list__item-avatar">navigate_next</i>
+                        ${todofield.value}
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="list-checkbox-1">
+                        <input type="checkbox" id="list-checkbox-1" class="mdl-checkbox__input" unchecked />
+                        </label>
+                    </span>
+                </li>
+                `;
+                todofield.value="";
+        }        
 
     </script>
 
@@ -76,7 +76,9 @@
         <div class="page-content">
             <!-- Your content goes here -->
             <!-- Textfield with Floating Label -->
-            <form onsubmit="addToDo()">
+
+            <form onsubmit="addtodo()"">
+
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <input class="mdl-textfield__input" type="text" id="todofield">
                     <label class="mdl-textfield__label" for="todofield">Add task</label>
